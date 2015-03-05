@@ -15,11 +15,35 @@ In the following example, I reconcile my credit card statement with my bank
 statement. You'll notice that sometimes money settles out of order or is
 batched.
 
-
-```bash
-bin/recontool tests/fixtures/left.csv tests/fixtures/right.csv
+Input data:
+```
+Left:                   Right:
+$138,831.25             $116,096.01
+$149,066.73             $143,409.75
+$269,099.84             $149,066.73
+$143,409.75             $269,099.84
+$116,096.01             $252,897.59
+$125,499.93             $125,499.93
+$127,700.74             $127,700.74
+$252,897.59             $162,988.06
+$162,988.06             $144,852.92
+$144,852.92             $255,859.17
+$182,512.97             $828,120.40
+$144,047.30             $571,593.77
+$145,067.95
+$190,242.65
+$331,703.13
+$161,106.67
+$313,562.43
+$258,031.34
 ```
 
+Command:
+```bash
+recontool left.csv right.csv
+```
+
+Output:
 ```
 
 
